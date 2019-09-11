@@ -17,7 +17,7 @@ class Triangle
     elsif a == b && b == c 
       :equilateral
       elsif (a == b && b != c) || (a == c && c != b) || (c == b && b != a)
-      :isoceles
+      :isosceles
     else
       a != b && b != c && a != c
       :scalene
