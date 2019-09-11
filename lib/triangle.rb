@@ -15,12 +15,12 @@ class Triangle
         puts error.message
       end
     elsif a == b && b == c 
-      puts :equilateral
+      :equilateral
       elsif (a == b && b != c) || (a == c && c != b) || (c == b && b != a)
-      puts :isoceles
+      :isoceles
     else
       a != b && b != c && a != c
-      puts :scalene
+      :scalene
     end
   end
     
