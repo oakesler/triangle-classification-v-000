@@ -8,7 +8,7 @@ class Triangle
   end
   
   def self.kind
-    if (a == 0 || b == 0 || c == 0) || (a + b) < c
+    if (a == 0 || b == 0 || c == 0) || ((a + b) < c || (b + c) < a || (a + c) < b)
       begin
         raise TriangleError
       rescue TriangleError => error 
@@ -16,7 +16,7 @@ class Triangle
       end
     elsif a == b && b == c 
       puts :equilateral
-      elsif (a == b && b != c) || (a == c && c != b) || (c == b && b != a) 
+      elsif (a == b && b != c) || (a == c && c != b) || (c == b && b != a)
       puts :isoceles
     else
       a != b && b != c && a != c
