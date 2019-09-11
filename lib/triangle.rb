@@ -11,8 +11,8 @@ class Triangle
     if (a <= 0 || b <= 0 || c <= 0) || ((a + b) < c || (b + c) < a || (a + c) < b)
       begin
         raise TriangleError
-      rescue TriangleError => error 
-        puts error.message
+      #rescue TriangleError => error 
+        #puts error.message
       end
     elsif a == b && b == c 
       :equilateral
@@ -25,8 +25,8 @@ class Triangle
   end
     
   class TriangleError < StandardError
-    def message 
-      puts "This is not a valid triangle."
-    end
+    #def message 
+      #puts "This is not a valid triangle."
+    #end
   end
 end
