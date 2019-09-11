@@ -7,7 +7,7 @@ class Triangle
     @c = c
   end
   
-  def kind
+  def self.kind
     if (a == 0 || b == 0 || c == 0) || (a + b) < c
       begin
         raise TriangleError
